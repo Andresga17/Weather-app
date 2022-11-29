@@ -11,12 +11,12 @@ const WeatherCard = ({weather, temp}) => {
     return (
         <article className='card'>
             <header className='card_header'>
-            <h1 className='card__title'>Wheather App</h1>
-            <h2 className='card__subtitle'>{weather?.name} {weather?.sys.country}</h2>
+                <h1 className='card__title'>Wheather App</h1>
+                <h2 className='card__subtitle'>{weather?.name} {weather?.sys.country}</h2>
             </header>
 
             <section className='card__icon-container'>
-            <img className='card__icon' src={weather && `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
+                <img className='card__icon' src={weather && `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
             </section>
             <section className='card__info'>
                 <h3 className='card__description'>"{weather?.weather[0].description}"</h3>
