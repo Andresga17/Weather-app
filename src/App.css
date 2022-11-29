@@ -1,0 +1,90 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('/public/images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    background-color: salmon;
+    opacity: 0.77;
+    padding: 20px;
+    padding-top: 30px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card__header,
+.card__footer,
+.card__temp {
+    grid-column: span 2;
+}
+
+.card__title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.card__subtitle {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.card__temp {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card__info {
+    padding-top: 20px;
+}
+
+.card__description {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.card__list {
+    display: grid;
+    gap: 8px;
+}
+
+.card__item {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.card__footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.card__btn {
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: indianred;
+    box-shadow: 1px 1px 10px rgba(rgb(255, 147, 90), rgb(129, 161, 129), rgb(163, 163, 168));
+}
+
+.card__btn:hover {
+    transform: scale(1.05);
+}
+
+.card__btn:active {
+    transform: scale(1);
+}
