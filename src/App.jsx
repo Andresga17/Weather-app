@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
-import Loading from './components/loading'
 import WeatherCard from './components/WeatherCard'
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       })
     }
     
-
     useEffect(() => {
       navigator.geolocation.getCurrentPosition(success)
     }, [])
@@ -45,8 +43,8 @@ function App() {
               weather={weather}
               temp={temp} 
             />
-          : 
-            <Loading />
+          :
+            <h1>Cargando...</h1>
         }    
       </div>
     )
