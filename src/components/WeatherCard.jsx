@@ -19,11 +19,11 @@ const WeatherCard = ({weather, temp}) => {
                 <img className='card__icon' src={weather && `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
             </section>
             <section className='card__info'>
-                <h3 className='card__description'>"{weather?.weather[0].description}"</h3>
+                <h3 className='card__description'><b>"{weather?.weather[0].description}"</b></h3>
                 <ul className='card__list'>
-                    <li className='card__item'><span className='card__span'></span>{weather?.wind.speed} m/s</li>
-                    <li className='card__item'><span className='card__span'></span>{weather?.clouds.all} %</li>
-                    <li className='card__item'><span className='card__span'></span>{weather?.main.pressure} hPa</li>
+                    <li className='card__item'><span className='card__span'>Wind speed: </span><b>{weather?.wind.speed} m/s</b></li>
+                    <li className='card__item'><span className='card__span'>cloud percentage: </span><b>{weather?.clouds.all} %</b></li>
+                    <li className='card__item'><span className='card__span'>Presure: </span><b>{weather?.main.pressure} hPa</b></li>
                 </ul>
             </section >
             <h3 className='card__temp'>{IsCelsius ? `${temp?.celsius} °C` : `${temp?.farenheit} °F`} </h3>
